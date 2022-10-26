@@ -49,7 +49,8 @@ def save():
         messagebox.showinfo(title="OOPS!", message="Please don't keep any fields empty")
     else:
         with open("data.json", "w") as data_file: #opens in append mode and creates the file names info.txt as there is no file of that name here
-            json.dump(new_data, data_file) #puts the new_data into the data_file
+           #json.dump(data to enter, location to enter data in, indentation space number) ******
+            json.dump(new_data, data_file, indent=4) #puts the new_data into the data_file
 
             website_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN WEBSITE TEXTBOX
             password_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN PASSWORD TEXTBOX
