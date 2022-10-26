@@ -48,9 +48,13 @@ def save():
     if len(website) == 0 or len(password) == 0: #checks whether user left anything blank
         messagebox.showinfo(title="OOPS!", message="Please don't keep any fields empty")
     else:
-        with open("data.json", "w") as data_file: #opens in append mode and creates the file names info.txt as there is no file of that name here
-           #json.dump(data to enter, location to enter data in, indentation space number) ******
-            json.dump(new_data, data_file, indent=4) #puts the new_data into the data_file
+        with open("data.json", "r") as data_file:
+            #Reading old data
+            data = json.load(data_file)
+            #Updating old data with new data
+            data.update(new_data)
+        with open("data.json", "w") as data_file:
+            json.dump(data, data_file, indent=4) #dumps the data, into the data_file and uses a 4 space indent
 
             website_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN WEBSITE TEXTBOX
             password_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN PASSWORD TEXTBOX
