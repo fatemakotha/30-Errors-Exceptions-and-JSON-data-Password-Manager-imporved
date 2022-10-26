@@ -95,7 +95,7 @@ password_label.grid(row=3, column=0)
 #_________________________________________________________________________________________________________________________________________________________________
 
 #Entries
-website_entry = Entry(width=50)
+website_entry = Entry(width=34)
 website_entry.grid(row=1, column=1)
 website_entry.focus() #gets the cursor blinking in this box for user to type
 
@@ -112,7 +112,7 @@ password_entry.grid(row=3, column=1)
 #_________________________________________________________________________________________________________________________________________________________________
 
 #Buttons
-search_button = Button(text="Search")
+search_button = Button(text="Search", width=12)
 search_button.grid(row=1, column=2)
 generate_password_button = Button(text="Generate Button", command=generate)
 generate_password_button.grid(row=3, column=2)
