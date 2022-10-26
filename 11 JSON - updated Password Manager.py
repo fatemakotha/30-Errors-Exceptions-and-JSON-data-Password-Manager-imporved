@@ -40,7 +40,7 @@ def save():
     if len(website) == 0 or len(password) == 0: #checks whether user left anything blank
         messagebox.showinfo(title="OOPS!", message="Please don't keep any fields empty")
     else:
-        with open("data.json", "a") as data_file: #opens in append mode and creates the file names info.txt as there is no file of that name here
+        with open("data.json", "w") as data_file: #opens in append mode and creates the file names info.txt as there is no file of that name here
             data_file.write(f"{website} | {email}| {password}\n")
             website_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN WEBSITE TEXTBOX
             password_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN PASSWORD TEXTBOX
