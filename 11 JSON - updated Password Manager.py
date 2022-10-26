@@ -96,7 +96,7 @@ password_label.grid(row=3, column=0)
 
 #Entries
 website_entry = Entry(width=50)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry.grid(row=1, column=1)
 website_entry.focus() #gets the cursor blinking in this box for user to type
 
 
