@@ -12,7 +12,8 @@ for post in facebook_posts:
     try:
         total_likes = total_likes + post['Likes']
     except KeyError:
-        pass #its going to skip the dictionaries with no key named "Likes" and continue again
-
+        pass #its going to add nothing the dictionaries with no key named "Likes" and continue again
+        #...............OR......................
+        # total_likes += 0 #its going to add 0 the dictionaries with no key named "Likes" and continue again
 
 print(total_likes)
