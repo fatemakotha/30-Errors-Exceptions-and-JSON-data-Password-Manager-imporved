@@ -65,6 +65,27 @@ def save():
         finally:
             website_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN WEBSITE TEXTBOX
             password_entry.delete(0, END) #CLEARS EVERYTHING FROM 0TH INDEX TO LAST IN PASSWORD TEXTBOX
+#--------------------------FIND PASSWORD--------------------------------#
+
+def find_password():
+    website = website_entry.get()
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+            print(data)
+            # prints: {'kkk': {'email': 'fatema.alam.kotha@gmail.com', 'password': '444'} WHICH IS A DICT
+    except FileNotFoundError:
+         messagebox.showinfo(title="ERROR", message="No data found")
+
+    else:
+        if website in data:
+            email = data[website]["email"] #gets hold of fatema.alam.kotha@gmail.com
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"{email}\n Password: {password}")
+        else:
+            messagebox.showinfo(title="ERROR", message=f"No details for {website} exits")
+
+
 
 
 
