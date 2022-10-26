@@ -18,5 +18,3 @@ print(bmi)
 #   File "C:\Users\fatem\PycharmProjects\fatemakotha\30-Errors-Exceptions-and-JSON-data-Password-Manager-imporved\main.py", line 9, in <module>
 #     raise ValueError("Human height should not be over 3 meters") #which says the the value entered is wrong and
 # ValueError: Human height should not be over 3 meters
-
-
