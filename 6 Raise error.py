@@ -11,5 +11,4 @@ else: #when everything in the try block succeeds the block below is activated:
     content = file.read()
     print(content)
 finally: #runs, no matter what happens
-    file.close()
-    print("File was closed")
+    raise KeyError("doomed") #NO MATTER WHAT HAPPENS IT WILL SHOW KEYERROR with a message "doomed**
